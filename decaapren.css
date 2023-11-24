@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #61b6e1;
+}
+
+.titulo-con-imagen {
+  position: relative;
+  display: inline-block;
+}
+
+.imagen-titulo {
+  width: 200px;
+  position: absolute;
+  top: -30px; /* Ajusta la posición vertical de la imagen */
+  left: -700px; /* Ajusta la posición horizontal de la imagen */
+  z-index: 1; /* Asegura que la imagen esté por encima del título */
+}
+
+.titulo {
+  background: #0083c6;
+  display: flex;
+  color: white;
+  font-size: 52px;
+  font-family: 'Fredoka One', cursive;
+  width: 360px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px; /* Eliminar todos los márgenes */
+}
+
+.subtitulo {
+  background: #0083c6;
+  height: 70px;
+  width: 360px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0; /* Eliminar todos los márgenes */
+}
+
+h3 {
+  background: #0083c6;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  width: 360px;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-aprendizaje {
+  width: 440px;
+  font-size: 30px;
+  height: 440px;
+  background: #0083c6;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  flex-direction: flex;
+  margin: 30px;
+  margin-top: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agregamos una transición suave al cambio de color de fondo */
+}
+
+.tarjeta-de-aprendizaje img {
+  width: 180px;
+  
+}
+
+.tarjeta-de-aprendizaje:hover,
+.tarjeta-de-aprendizaje.hover-effect { /* Agregamos .hover-effect aquí para que tenga prioridad */
+  background-color: #f0f0f0; /* Cambia el color de fondo al hacer hover o cuando tiene la clase 'hover-effect' */
+color: black;
+}
+
+.tarjeta-de-aprendizaje.selected {
+  border: 2px solid #8ea2b8; /* Cambia el borde de la tarjeta seleccionada */
+  background-color: #e9f5ff; /* Cambia el color de fondo de la tarjeta seleccionada */
+  color: black;
+}
+
+#seleccion-aprendizaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#boton-seleccionar-aprendizaje {
+  margin: 20px;
+}
+
+#contenido-cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0083c6;
+}
+
+.tarjetas-de-cube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribuir las tarjetas con espacio entre ellas */
+  margin: 160px; /* Añadir un margen alrededor de las tarjetas */
+  background-color: #0083c6; /* Color de fondo del grupo de tarjetas */
+}
+
+.tarjeta-apartado-cube {
+  width: 250px; /* Ajustar el ancho de las tarjetas de CUBE */
+  height: 400px; /* Ajustar la altura de las tarjetas de CUBE */
+  background: #61b6e1;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Asegurar que el contenido se distribuya verticalmente */
+  justify-content: center;
+  align-items: center;
+  margin: 20px; /* Añadir un margen entre las tarjetas */
+}
+
+.tarjeta-apartado-cube img {
+  height: 120px;
+  width: 200px;
+  margin-bottom: 10px; /* Añadir espacio entre la imagen y el texto */
+}
+
+#boton-seleccionar-CUBE {
+  margin: 20px;
+  align-items: center;
+}
+
+#contenido-cube h1 {
+  display: flex;
+  color: white;
+  font-size: 40px;
+  font-family: 'Fredoka One', cursive;
+ 
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+#contenido-cube h2 {
+  font-size: 20px;
+  color: aliceblue;
+}
+
+#contenido-cube img {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+#contenido-cube p {
+  font-size: 20px;
+  color: aliceblue;
+}
+
+input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
+  display: none;
+}

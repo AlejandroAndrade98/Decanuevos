@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DECAPRENDIZAJE!</title>
+    <script src="./js/decaaprendi.js"></script>
+    <link rel="stylesheet" href="./decaapren.css" />
+    <style>
+      #contenido-cube,
+      #contenido-cestas,
+      #contenido-basicos {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="seleccion-aprendizaje">
+      <div class="titulo-con-imagen">
+        <img src="./assets/Decathlon-Logo.png" alt="Logo-deca" class="imagen-titulo" />
+        <h1 class="titulo">¡Bienvenido!</h1>
+      </div>
+
+      <h2 class="subtitulo">¡A tus primeros pasos en tienda!</h2>
+      <h3>¿Qué quieres aprender?</h3>
+
+      <div class="tarjetas">
+        <label class="tarjeta-de-aprendizaje" for="CUBE">
+          <p>CUBE</p>
+          <img src="./assets/Cóndor Técnología.png" alt="img-tecnologia" />
+        </label>
+        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="CUBE" />
+
+        <label class="tarjeta-de-aprendizaje" for="Cestas">
+          <p>Cestas</p>
+          <img src="./assets/Cóndor Salud Financiera.png" alt="img-cestas" />
+        </label>
+        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Cestas" />
+
+        <label class="tarjeta-de-aprendizaje" for="Básicos-de-la-sección">
+          <p>Básicos de la sección</p>
+          <img src="./assets/Cóndor-Responsabilidad social.png" alt="img-básicos-sección" />
+        </label>
+        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Básicos-de-la-sección" />
+      </div>
+
+      <button id="boton-seleccionar-aprendizaje">Seleccionar</button>
+    </section>
+
+    <!-- Contenido para CUBE -->
+    <section id="contenido-cube">
+      <h1 class="contenido-cube-titulo">¡Has seleccionado CUBE!</h1>
+      <p>Aca encontrarás las diferentes funciones que usamos desde nuestro celular corporativo</p>
+      <p>Para ello arrancaremos desde el menu Hamburguesa</p>
+      <h2>Menu Hamburguesa</h2> 
+      <img src="./assets/CUBE/menuHamburguesa.jpg">
+
+      <div class="tarjetas-de-cube"> 
+        <label class="tarjeta-apartado-cube" for="apartado-cube-dashboard">
+            <p>Dashboard</p>
+            <img src="./assets/CUBE/apartadoDashboard.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-dashboard" />
+
+              <section id="contenido-dashboard" style="display: none;">
+                Lo primero que encontrarás en el Dasboard serán 4 cuadros importantes:
+                ASDAQFQF
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-comercio">
+            <p>Comercio</p>
+            <img src="./assets/CUBE/apartadoComercio2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-comercio" />
+
+              <section id="contenido-comercio" style="display: none;">
+                CONTENIDO DE COMERCIO
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-catalogo">
+            <p>Catálogo</p>
+            <img src="./assets/CUBE/apartadoCatalogo2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-catalogo" />
+
+              <section id="contenido-catalogo" style="display: none;">
+                todo lo del catalogo
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-usuario">
+            <p>Gestión Del Usuario</p>
+            <img src="./assets/CUBE/apartadoGestionDelUsuario2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-gestion-usuario" />
+
+              <section id="contenido-gestion-del-usuario" style="display: none;">
+                todo lo de gestión del usuario
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-cesta">
+            <p>Cesta</p>
+            <img src="./assets/CUBE/apartadoCesta2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-cesta" />
+
+              <section id="contenido-cesta" style="display: none;">
+                todo sobre las cestas
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-pedido">
+            <p>Pedido</p>
+            <img src="./assets/CUBE/apartadoPedido2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-pedido" />
+
+              <section id="contenido-pedido" style="display: none;">
+                todo sobre pedido
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-flujo-mercancias">
+            <p>Flujo de mercancías</p>
+            <img src="./assets/CUBE/apartadoFlujoDeMercancias2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-flujo-mercancias" />
+
+              <section id="contenido-flujo-de-mercancias" style="display: none;">
+                todo sobre flujo de mercancias
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-cesta-impresion">
+            <p>Cesta De Impresión</p>
+            <img src="./assets/CUBE/apartadoCestaDeImpresion2.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-cesta-impresion" />
+
+              <section id="contenido-cesta-impresion" style="display: none;">
+                todo sobre la cesta Impresión
+              </section>
+        </label>
+    
+        <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-backoffice">
+            <p>Gestión Del Backoffice</p>
+            <img src="./assets/CUBE/apartadoGestionDelBackoffice.jpg" alt="img-CUBE">    
+            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-gestion-backoffice" />
+
+              <section id="contenido-gestion-backoffice" style="display: none;">
+                todo sobre la gestion del Backoffice
+              </section>
+        </label>
+    </div>
+
+    <button id="boton-seleccionar-CUBE">Seleccionar</button>
+
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Resto del código...
+      
+        // Agregar evento de clic al botón de seleccionar para CUBE
+        botonSeleccionarCube.addEventListener('click', function() {
+          // Ocultar el elemento de selección de aprendizaje para CUBE
+          seleccionAprendizajeCube.style.display = 'none';
+      
+          // Mostrar el contenido correspondiente a la opción seleccionada
+          const opcionSeleccionada = document.querySelector('.tarjeta-de-aprendizaje.selected');
+          const target = opcionSeleccionada.dataset.target;
+          const contenidoSeleccionado = document.getElementById(target);
+          const contenidosCube = document.querySelectorAll('.tarjeta-apartado-cube section');
+          contenidosCube.forEach(contenido => contenido.style.display = 'none');
+          contenidoSeleccionado.style.display = 'flex';
+        });
+      });
+    <div class="cestas">
+      <section id="contenido-cestas">
+        <h1 class="contenido-cestas">¡Has seleccionado Cestas!</h1>
+        <h2>Primero deberas entender el cliente contactable</h2>
+        <p>El primer paso es fidelizar al cliente, como cliente contactable</p>
+        <p>Luego de ello, desde el menu Hamburguesa, vamos al apartado de Cesta</p>
+      </section>
+    </div>
+
+    <div class="basicos-de-seccion">
+      <section id="contenido-basicos">
+        <h1 class="titulo-básicos-sección">¡Has seleccionado básicos de sección!</h1>
+        <h2>basicos</h2>
+        <p>Son 5 los pilares</p>
+        <p>El primero es...</p>
+      </section>
+    </div>
+
+    <script src="./js/decaaprendi.js"></script>
+  </body>
+</html>
+</a>
