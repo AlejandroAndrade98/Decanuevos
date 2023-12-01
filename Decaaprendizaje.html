@@ -166,28 +166,6 @@ class SeleccionAprendizaje {
     document.getElementById('seleccion-aprendizaje').style.display = 'none';
   }
 }
-
-// Crear una instancia de la clase
-const seleccionAprendizajeCube = new SeleccionAprendizaje();
-
-
-      document.addEventListener('DOMContentLoaded', function() {
-        // Resto del código...
-      
-        // Agregar evento de clic al botón de seleccionar para CUBE
-        botonSeleccionarCube.addEventListener('click', function() {
-          // Ocultar el elemento de selección de aprendizaje para CUBE
-          seleccionAprendizajeCube.style.display = 'none';
-      
-          // Mostrar el contenido correspondiente a la opción seleccionada
-          const opcionSeleccionada = document.querySelector('.tarjeta-de-aprendizaje.selected');
-          const target = opcionSeleccionada.dataset.target;
-          const contenidoSeleccionado = document.getElementById(target);
-          const contenidosCube = document.querySelectorAll('.tarjeta-apartado-cube section');
-          contenidosCube.forEach(contenido => contenido.style.display = 'none');
-          contenidoSeleccionado.style.display = 'flex';
-        });
-      });
     </script>
   </body>
 </html>
