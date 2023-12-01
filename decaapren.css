@@ -179,3 +179,8 @@ color: black;
 input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
   display: none;
 }
+
+#contenido-Dashboard { 
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}

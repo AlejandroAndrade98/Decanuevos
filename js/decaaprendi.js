@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const opcion1 = document.getElementById('CUBE');
   const opcion2 = document.getElementById('Cestas');
   const opcion3 = document.getElementById('Básicos-de-la-sección');
-  const tarjetasCube = document.querySelectorAll('.tarjetas-apartado-cube');
+  const tarjetasCube = document.querySelectorAll('.tarjeta-apartado-cube');
   const seccionesContenido = document.querySelectorAll('section[id^="contenido-"]');
 
   // Variable para almacenar la sección seleccionada en CUBE
@@ -73,36 +73,63 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Agregar evento de clic a cada tarjeta Cube
-  tarjetasCube.forEach(tarjetaCube => {
-    tarjetaCube.addEventListener('click', function () {
+// Agregar evento de clic a cada tarjeta Cube
+tarjetasCube.forEach(tarjetaCube => {
+  tarjetaCube.addEventListener('click', function () {
       handleTarjetasCubeClick(tarjetaCube);
-    });
+  });
 
-    tarjetaCube.addEventListener('mouseenter', function () {
+  tarjetaCube.addEventListener('mouseenter', function () {
       tarjetaCube.classList.add('hover-effect');
-    });
+  });
 
-    tarjetaCube.addEventListener('mouseleave', function () {
+  tarjetaCube.addEventListener('mouseleave', function () {
       tarjetaCube.classList.remove('hover-effect');
-    });
   });
+});
 
-  // Agregar eventos de clic para los elementos del dashboard y del apartado CUBE
-  const dashboard = document.querySelector('.tarjetas-apartado-cube[for="apartado-cube-dashboard"]');
-  dashboard.addEventListener('click', function () {
-    // Al hacer clic en Dashboard, mostrar su sección correspondiente
-    showSection('dashboard');
-    // Asignar la sección seleccionada a Dashboard
-    seccionSeleccionadaCube = 'dashboard';
-  });
+// Agregar eventos de clic para los elementos del dashboard y del apartado CUBE
+const tarjetaDashboard = document.querySelector('.tarjeta-apartado-cube[for="apartado-cube-dashboard"]');
+tarjetaDashboard.addEventListener('click', function () {
+  // Al hacer clic en el dashboard, mostrar su sección correspondiente
+  showSection('contenido-dashboard');
+  // Asignar la sección seleccionada al dashboard
+  seccionSeleccionadaCube = 'contenido-dashboard';
+});
 
-  // (Agrega eventos para los demás elementos del dashboard y CUBE)
+// Obtener el botón de seleccionar de CUBE
+const botonSeleccionarCube = document.getElementById('boton-seleccionar-CUBE');
+botonSeleccionarCube.addEventListener('click', function () {
+  // Mostrar la sección correspondiente a la opción seleccionada en CUBE
+  showSection(seccionSeleccionadaCube);
+});
 
-  // Obtener el botón de seleccionar de CUBE
-  const botonSeleccionarCube = document.getElementById('boton-seleccionar-CUBE');
-  botonSeleccionarCube.addEventListener('click', function () {
-    // Mostrar la sección correspondiente a la opción seleccionada en CUBE
+// Función para manejar el clic en las tarjetas de apartados en CUBE
+function handleTarjetasCubeClick(tarjeta) {
+  // Remover la clase 'selected' de todas las tarjetas Cube
+  tarjetasCube.forEach(t => t.classList.remove('selected'));
+
+  // Agregar la clase 'selected' solo a la tarjeta clicada
+  tarjeta.classList.add('selected');
+
+  // Almacenar la sección correspondiente al hacer clic en la tarjeta
+  seccionSeleccionadaCube = tarjeta.getAttribute('for');
+}
+
+const botonSeleccionarDashboard = document.getElementById('boton-seleccionar-dashboard'); // Declare this variable before using it
+
+botonSeleccionarDashboard.addEventListener('click', function () {
+  showSection('contenido-dashboard');
+  seccionSeleccionadaCube = 'contenido-dashboard';
+});
+botonSeleccionarCube.addEventListener('click', function () {
+  if (seccionSeleccionadaCube) {
     showSection(seccionSeleccionadaCube);
-  });
+  } else {
+    // Set a default section if seccionSeleccionadaCube is not defined
+    showSection('default-section');
+  }
+});
+
+
 });
