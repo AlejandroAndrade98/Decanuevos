@@ -180,15 +180,27 @@ input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
   display: none;
 }
 
-#contenido-Dashboard { 
-  font-size: 20px;
-  color: rgb(0, 0, 0);
+#contenido-dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centra el texto */
+  color: white;
 }
 
-#contenido-dashboard h1 {
-  display: flex;
-  color: white;
-  font-size: 40px;
-  font-family: 'Fredoka One', cursive; 
+.tarjeta-Dashboard {
+  max-width: 80%; /* Ajusta según sea necesario */
+  margin: 20px auto; /* Centra horizontalmente con espacio superior e inferior */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 20px; /* Añade un relleno al contenido */
+  border-radius: 10px; /* Añade esquinas redondeadas */
 }
+
+.imagenDashboard1 {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Ajusta el espacio entre el texto y la imagen */
+}
+
 
