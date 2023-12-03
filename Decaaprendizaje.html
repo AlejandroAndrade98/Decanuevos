@@ -1,84 +1,266 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>DECAPRENDIZAJE!</title>
-    <script src="./js/decaaprendi.js"></script>
-    <link rel="stylesheet" href="./decaapren.css" />
-    <style>
-      #contenido-cube,
-      #contenido-cestas,
-      #contenido-basicos {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <section id="seleccion-aprendizaje">
-      <div class="titulo-con-imagen">
-        <img src="./assets/Decathlon-Logo.png" alt="Logo-deca" class="imagen-titulo" />
-        <h1 class="titulo">¡Bienvenido!</h1>
-      </div>
 
-      <h2 class="subtitulo">¡A tus primeros pasos en tienda!</h2>
-      <h3>¿Qué quieres aprender?</h3>
+<head>
+  <meta charset="utf-8" />
+  <title>DECAPRENDIZAJE!</title>
+  <script src="./js/decaaprendi.js"></script>
+  <link rel="stylesheet" href="./decaapren.css" />
+  <style>
+    #contenido-cube,
+    #contenido-cestas,
+    #contenido-basicos,
+    #contenido-dashboard,
+    #contenido-comercio,
+    #contenido-catalogo,
+    #contenido-gestion-del-usuario,
+    #contenido-cesta,
+    #contenido-pedido,
+    #contenido-flujo-mercancias,
+    #contenido-cesta-impresion,
+    #contenido-gestion-backoffice {
+      display: none;
+    }
+  </style>
+</head>
 
-      <div class="tarjetas">
-        <label class="tarjeta-de-aprendizaje" for="CUBE">
-          <p>CUBE</p>
-          <img src="./assets/Cóndor Técnología.png" alt="img-tecnologia" />
-        </label>
-        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="CUBE" />
+<body>
+  <section id="seleccion-aprendizaje">
+    <div class="titulo-con-imagen">
+      <img src="./assets/Decathlon-Logo.png" alt="Logo-deca" class="imagen-titulo" />
+      <h1 class="titulo">¡Bienvenido!</h1>
+    </div>
 
-        <label class="tarjeta-de-aprendizaje" for="Cestas">
-          <p>Cestas</p>
-          <img src="./assets/Cóndor Salud Financiera.png" alt="img-cestas" />
-        </label>
-        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Cestas" />
+    <h2 class="subtitulo">¡A tus primeros pasos en tienda!</h2>
+    <h3>¿Qué quieres aprender?</h3>
 
-        <label class="tarjeta-de-aprendizaje" for="Básicos-de-la-sección">
-          <p>Básicos de la sección</p>
-          <img src="./assets/Cóndor-Responsabilidad social.png" alt="img-básicos-sección" />
-        </label>
-        <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Básicos-de-la-sección" />
-      </div>
+    <div class="tarjetas">
+      <label class="tarjeta-de-aprendizaje" for="CUBE">
+        <p>CUBE</p>
+        <img src="./assets/Cóndor Técnología.png" alt="img-tecnologia" />
+      </label>
+      <input type="radio" name="tarjeta-seleccion-aprendizaje" id="CUBE" />
 
-      <button id="boton-seleccionar-aprendizaje">Seleccionar</button>
-    </section>
+      <label class="tarjeta-de-aprendizaje" for="Cestas">
+        <p>Cestas</p>
+        <img src="./assets/Cóndor Salud Financiera.png" alt="img-cestas" />
+      </label>
+      <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Cestas" />
 
-    <!-- Contenido para CUBE -->
-    <section id="contenido-cube" class="contenido-cube-titulo">
+      <label class="tarjeta-de-aprendizaje" for="Básicos-de-la-sección">
+        <p>Básicos de la sección</p>
+        <img src="./assets/Cóndor-Responsabilidad social.png" alt="img-básicos-sección" />
+      </label>
+      <input type="radio" name="tarjeta-seleccion-aprendizaje" id="Básicos-de-la-sección" />
+    </div>
+
+    <button id="boton-seleccionar-aprendizaje">Seleccionar</button>
+  </section>
+
+  <!-- Contenido para CUBE -->
+    <section id="contenido-cube">
       <h1>¡Has seleccionado CUBE!</h1>
       <p>Aca encontrarás las diferentes funciones que usamos desde nuestro celular corporativo</p>
       <p>Para ello arrancaremos desde el menu Hamburguesa</p>
-      <h2>Menu Hamburguesa</h2> 
+      <h2>Menu Hamburguesa</h2>
       <img src="./assets/CUBE/menuHamburguesa.jpg">
 
-      <div class="tarjetas-de-cube"> 
-        <label class="tarjeta-apartado-cube" for="apartado-cube-dashboard">
-            <p>Dashboard</p>
-            <img src="./assets/CUBE/apartadoDashboard.jpg" alt="img-CUBE">    
-            <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-dashboard" />
-
-              <section id="contenido-dashboard" style="display: none;">
-                <p>Lo primero que encontrarás en el Dasboard serán 4 cuadros importantes:
-                ASDAQFQF</p>
-              </section>
-              <button id="boton-seleccionar-dashboard">Seleccionar</button>
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="Dashboard">
+          <p>Dashboard</p>
+          <img src="./assets/CUBE/apartadoDashboard.jpg" alt="img-Dashboard">
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-dashboard" />
         </label>
       </div>
-    <script>
-class SeleccionAprendizaje {
-  constructor() {
-    // Puedes inicializar propiedades o realizar otras tareas de configuración aquí
-  }
 
-  ocultar() {
-    // Lógica para ocultar el elemento de selección de aprendizaje
-    // Por ejemplo, podrías cambiar el estilo de display a 'none'
-    document.getElementById('seleccion-aprendizaje').style.display = 'none';
-  }
-}
-    </script>
-  </body>
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-comercio">
+          <p>Comercio</p>
+          <img src="./assets/CUBE/apartadoComercio2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-comercio" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-catalogo">
+          <p>Catálogo</p>
+          <img src="./assets/CUBE/apartadoCatalogo2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-catalogo" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-usuario">
+          <p>Gestión Del Usuario</p>
+          <img src="./assets/CUBE/apartadoGestionDelUsuario2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-gestion-usuario" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-cesta">
+          <p>Cesta</p>
+          <img src="./assets/CUBE/apartadoCesta2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-cesta" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-pedido">
+          <p>Pedido</p>
+          <img src="./assets/CUBE/apartadoPedido2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-pedido" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-flujo-mercancias">
+          <p>Flujo de mercancías</p>
+          <img src="./assets/CUBE/apartadoFlujoDeMercancias2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-flujo-mercancias" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-cesta-impresion">
+          <p>Cesta De Impresión</p>
+          <img src="./assets/CUBE/apartadoCestaDeImpresion2.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-cesta-impresion" />
+        </label>
+      </div>
+
+      <div class="tarjetas-de-cube">
+        <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-backoffice">
+          <p>Gestión Del Backoffice</p>
+          <img src="./assets/CUBE/apartadoGestionDelBackoffice.jpg" alt="img-CUBE">    
+          <input type="radio" name="tarjeta-seleccion-CUBE" id="apartado-cube-gestion-backoffice" />
+      </div>
+
+      <button id="boton-seleccionar-dashboard">Seleccionar</button>
+
+    </section>
+    
+   <!-- Contenido específico de Dashboard -->
+   <section id="contenido-dashboard">
+    <h2>Dashboard</h2>
+    <!-- Aquí puedes agregar el contenido específico de Dashboard -->
+    <div class="tarjeta-Dashboard">
+      <label class="tarjeta-Dashboard" for="Dashboard">
+        <h1>¡Has seleccionado Dashboard!</h1>
+        <p>Información específica de Dashboard</p>
+      </label>
+    </div>
+  </section>
+</section>
+
+ <!-- Contenido específico de Comercio -->
+ <section id="contenido-comercio">
+  <h2>Comercio</h2>
+  <!-- Aquí puedes agregar el contenido específico de Comercio -->
+  <div class="tarjeta-Comercio">
+    <label class="tarjeta-Comercio" for="Comercio">
+      <p>Información específica de Comercio</p>
+    </label>
+  </div>
+</section>
+
+ <!-- Contenido específico de Catalogo -->
+ <section id="contenido-catalogo">
+  <h2>catalogo</h2>
+  <!-- Aquí puedes agregar el contenido específico de Catalogo -->
+  <div class="tarjeta-catalogo">
+    <label class="tarjeta-catalogo" for="apartado-cube-catalogo">
+      <p>Información específica de catalogo</p>
+    </label>
+  </div>
+</section>
+
+ <!-- Contenido específico de Gestion-del-usuario -->
+ <section id="contenido-gestion-del-usuario">
+  <h2>gestion-del-usuario</h2>
+  <!-- Aquí puedes agregar el contenido específico de Gestion-del-usuario -->
+  <div class="tarjeta-gestion-del-usuario">
+    <label class="tarjeta-apartado-cube" for="apartado-gestion-del-usuario">
+      <p>Información específica de gestion-del-usuario</p>
+    </label>
+  </div>
+</section>
+
+ <!-- Contenido específico de cesta -->
+ <section id="contenido-cesta">
+  <h2>cesta</h2>
+  <!-- Aquí puedes agregar el contenido específico de cesta -->
+  <div class="tarjeta-cesta">
+    <label class="tarjeta-apartado-cube" for="apartado-cube-cesta">
+      <p>Información específica de cesta</p>
+    </label>
+  </div>
+</section>
+
+  <!-- Contenido específico de pedido -->
+ <section id="contenido-pedido">
+  <h2>pedido</h2>
+  <!-- Aquí puedes agregar el contenido específico de pedido -->
+  <div class="tarjeta-pedido">
+    <label class="tarjeta-pedido" for="pedido">
+      <p>Información específica de pedido</p>
+    </label>
+  </div>
+</section>
+
+  <!-- Contenido específico de flujo-mercancias -->
+ <section id="contenido-flujo-mercancias">
+  <h2>flujo-mercancias</h2>
+  <!-- Aquí puedes agregar el contenido flujo-mercancias -->
+  <div class="tarjeta-flujo-mercancias">
+    <label class="tarjeta-apartado-cube" for="apartado-cube-flujo-mercancias">
+      <p>Información específica de flujo-mercancias</p>
+    </label>
+  </div>
+</section>
+
+  <!-- Contenido específico de cesta-impresion -->
+ <section id="contenido-cesta-impresion">
+  <h2>cesta-impresion</h2>
+  <!-- Aquí puedes agregar el contenido específico de cesta-impresion -->
+  <div class="tarjeta-cesta-impresion">
+    <label class="tarjeta-apartado-cube" for="apartado-cube-cesta-impresion">
+      <p>Información específica de cesta-impresion</p>
+    </label>
+  </div>
+</section>
+
+   <!-- Contenido específico de gestion-backoffice -->
+ <section id="contenido-gestion-backoffice">
+  <h2>gestion-backoffice</h2>
+  <!-- Aquí puedes agregar el contenido específico de gestion-backoffice -->
+  <div class="tarjeta-gestion-backoffice">
+    <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-backoffice">
+      <p>Información específica de gestion-backoffice</p>
+    </label>
+  </div>
+</section>
+
+</section>
+
+</section>
+
+
+
+
+  <script>
+    class SeleccionAprendizaje {
+      constructor() {
+        // Puedes inicializar propiedades o realizar otras tareas de configuración aquí
+      }
+
+      ocultar() {
+        // Lógica para ocultar el elemento de selección de aprendizaje
+        // Por ejemplo, podrías cambiar el estilo de display a 'none'
+        document.getElementById('seleccion-aprendizaje').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
 </html>
