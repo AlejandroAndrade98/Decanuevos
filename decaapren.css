@@ -184,3 +184,11 @@ input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
   font-size: 20px;
   color: rgb(0, 0, 0);
 }
+
+#contenido-dashboard h1 {
+  display: flex;
+  color: white;
+  font-size: 40px;
+  font-family: 'Fredoka One', cursive; 
+}
+
