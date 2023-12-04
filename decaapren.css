@@ -78,8 +78,8 @@ body {
 .tarjeta-de-aprendizaje:hover,
 .tarjeta-de-aprendizaje.hover-effect { /* Agregamos .hover-effect aquí para que tenga prioridad */
   background-color: #f0f0f0; /* Cambia el color de fondo al hacer hover o cuando tiene la clase 'hover-effect' */
-color: black;
-}
+  color: black;
+  }
 
 .tarjeta-de-aprendizaje.selected {
   border: 2px solid #8ea2b8; /* Cambia el borde de la tarjeta seleccionada */
@@ -186,6 +186,42 @@ input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
   border-radius: 10px; /* Añade esquinas redondeadas */
 }
 
+/* Estilos comunes para todas las tarjetas de CUBE */
+.tarjetas-de-cube .tarjeta-apartado-cube {
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s, box-shadow 0.3s; /* Agregamos una transición suave a los cambios */
+  margin: 10px; /* Agregamos un margen para separar las tarjetas */
+  flex-basis: calc(33.333% - 20px); /* Calculamos la base flex para que haya tres tarjetas por fila */
+  box-sizing: border-box; /* Incluimos el padding y el borde en el ancho y alto de la tarjeta */
+}
+
+/* Estilos específicos para las tarjetas de CUBE */
+.tarjetas-de-cube .tarjeta-apartado-cube p {
+  margin: 10px 0; /* Agregamos un espacio entre el párrafo y los bordes de la tarjeta */
+}
+
+/* Estilos al hacer hover sobre las tarjetas de CUBE */
+.tarjetas-de-cube .tarjeta-apartado-cube:hover {
+  border-color: #0083c6; /* Cambia el color del borde al hacer hover */
+  box-shadow: 0 0 15px rgba(0, 131, 198, 0.8); /* Cambia la sombra al hacer hover */
+}
+
+/* Ajustes para el contenedor de las tarjetas */
+.tarjetas-de-cube {
+  display: flex;
+  flex-wrap: wrap; /* Hace que las tarjetas se envuelvan a la siguiente línea si no caben en el ancho del contenedor */
+  justify-content: space-evenly; /* Distribuir las tarjetas con espacio entre ellas */
+  margin: 20px; /* Ajusta el margen alrededor del contenedor de las tarjetas */
+  background-color: #0083c6; /* Color de fondo del grupo de tarjetas */
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Y así sucesivamente para las otras secciones */
+
+
+
 .imagenDashboard1 {
   max-width: 100%;
   height: auto;
@@ -220,6 +256,13 @@ footer {
   color: white;
   padding: 10px;
   text-align: center;
+}
+
+#tarjetas-Cube {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
