@@ -93,6 +93,21 @@ body {
   align-items: center;
 }
 
+#boton-Inicio-cube,
+#boton-Inicio-dashboard,
+#boton-Inicio-comercio,
+#boton-Inicio-catalogo,
+#boton-Inicio-gestion-del-usuario,
+#boton-Inicio-cesta,
+#boton-Inicio-pedido,
+#boton-Inicio-flujo-mercancias,
+#boton-Inicio-cesta-impresion,
+#boton-Inicio-gestion-backoffice {
+  margin: 30px;
+  color: black;
+  background-color: white;
+}
+
 #boton-seleccionar-aprendizaje {
   margin: 20px;
 }
@@ -269,6 +284,4 @@ footer {
 #contenido-dashboard p {
   display: none;
 }
-
-
 
