@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const tarjetaCestaImpresion = document.getElementById('apartado-cube-cesta-impresion');
   const tarjetaGestionBackoffice = document.getElementById('apartado-cube-gestion-backoffice');
   const seccionesContenido = document.querySelectorAll('section[id^="contenido-"]');
+  const botonesInfo = document.querySelectorAll('.tarjeta-Dashboard button');
 
    let seleccionActual = null;
 
@@ -149,6 +150,17 @@ document.addEventListener('DOMContentLoaded', function () {
   botonSeleccionar.addEventListener('click', function () {
     // Ocultar el elemento de selección de aprendizaje
     seleccionAprendizaje.style.display = 'none';
+
+     // Agregar evento de clic a los botones de "+ Info" en la sección de Dashboard
+   botonesInfo.forEach(boton => {
+    boton.addEventListener('click', function () {
+      // Encuentra el párrafo asociado al botón
+      const parrafo = boton.previousElementSibling;
+
+      // Alterna la visibilidad del párrafo
+      parrafo.style.display = parrafo.style.display === 'block' ? 'none' : 'block';
+    });
+  });
 
     // Verificar qué opción ha sido seleccionada y mostrar el contenido correspondiente
     if (opcion1.checked) {

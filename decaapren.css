@@ -265,7 +265,10 @@ footer {
   flex-wrap: wrap;
 }
 
-
+/* Asegúrate de agregar este estilo para ocultar los párrafos */
+#contenido-dashboard p {
+  display: none;
+}
 
 
 
