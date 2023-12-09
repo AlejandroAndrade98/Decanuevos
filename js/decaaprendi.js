@@ -16,6 +16,55 @@ document.addEventListener('DOMContentLoaded', function () {
   const tarjetaGestionBackoffice = document.getElementById('apartado-cube-gestion-backoffice');
   const seccionesContenido = document.querySelectorAll('section[id^="contenido-"]');
 
+   let seleccionActual = null;
+
+  // Función para manejar el clic en las tarjetas de aprendizaje
+  function handleTarjetaClick(tarjeta, seccionId) {
+    // Ocultar todas las secciones
+    seccionesContenido.forEach(seccion => {
+      seccion.style.display = 'none';
+    });
+
+    // Mostrar la sección correspondiente al hacer clic en la tarjeta
+    document.getElementById(`contenido-${seccionId}`).style.display = 'flex';
+
+    // Actualizar la selección actualatrás
+    seleccionActual = seccionId;
+  }
+
+  // Agregar evento de clic a cada tarjeta de aprendizaje
+  tarjetas.forEach(tarjeta => {
+    tarjeta.addEventListener('click', function () {
+      const seccionId = tarjeta.getAttribute('for');
+      handleTarjetaClick(tarjeta, seccionId);
+    });
+  });
+
+  // Agregar evento de clic al botón de seleccionar
+  botonSeleccionar.addEventListener('click', function () {
+    // Ocultar el elemento de selección de aprendizaje
+    seleccionAprendizaje.style.display = 'none';
+
+    // En este punto, seleccionActual debería contener la sección seleccionada
+  });
+
+  // Función para manejar el clic en los botones de retroceso
+  function handleInicioClick() {
+    // Ocultar todas las secciones
+    seccionesContenido.forEach(seccion => {
+      seccion.style.display = 'none';
+    });
+
+    // Mostrar la selección anterior
+    seleccionAprendizaje.style.display = 'flex';
+    seleccionActual = null;
+  }
+
+  // Agregar evento de clic a los botones de retroceso
+  document.querySelectorAll('[id^="boton-Inicio"]').forEach(botonInicio => {
+    botonInicio.addEventListener('click', handleInicioClick);
+  });
+
   // Función para manejar el clic en las tarjetas de aprendizaje
   function handleTarjetaClick(tarjeta, seccionId) {
     // Remover la clase 'selected' de todas las tarjetas

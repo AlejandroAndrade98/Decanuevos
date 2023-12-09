@@ -62,7 +62,10 @@
       <p>Aca encontrarás las diferentes funciones que usamos desde nuestro celular corporativo</p>
       <p>Para ello arrancaremos desde el menu Hamburguesa</p>
       <h2>Menu Hamburguesa</h2>
+      <button id="boton-Inicio-cube">Inicio</button>
+
       <img src="./assets/CUBE/menuHamburguesa.jpg">
+      
       
       <section id="tarjetas-Cube"> 
       <div class="tarjetas-de-cube">
@@ -137,9 +140,7 @@
       </div>
     </section>
 
-      <button id="boton-seleccionar-dashboard">Seleccionar</button>
-
-    </section>
+          </section>
     
    <!-- Contenido específico de Dashboard -->
    <section id="contenido-dashboard">
@@ -149,6 +150,8 @@
         <h1>¡Has seleccionado Dashboard!</h1>
         <h2>Dashboard</h2>
         <p>Información específica de Dashboard</p>
+        <button id="boton-Inicio-dashboard">Inicio</button>
+
 
         <section id="nuestros-programas">    
         <div class="container">
@@ -192,6 +195,8 @@
   <div class="tarjeta-Comercio">
     <label class="tarjeta-Comercio" for="Comercio">
       <p>Información específica de Comercio</p>
+      <button id="boton-Inicio-comercio">Inicio</button>
+
     </label>
   </div>
 </section>
@@ -203,6 +208,7 @@
   <div class="tarjeta-catalogo">
     <label class="tarjeta-catalogo" for="apartado-cube-catalogo">
       <p>Información específica de catalogo</p>
+      <button id="boton-Inicio-catalogo">Inicio</button>
     </label>
   </div>
 </section>
@@ -214,6 +220,7 @@
   <div class="tarjeta-gestion-del-usuario">
     <label class="tarjeta-apartado-cube" for="apartado-gestion-del-usuario">
       <p>Información específica de gestion-del-usuario</p>
+      <button id="boton-Inicio-gestion-del-usuario">Inicio</button>
     </label>
   </div>
 </section>
@@ -225,6 +232,7 @@
   <div class="tarjeta-cesta">
     <label class="tarjeta-apartado-cube" for="apartado-cube-cesta">
       <p>Información específica de cesta</p>
+      <button id="boton-Inicio-cesta">Inicio</button>
     </label>
   </div>
 </section>
@@ -236,6 +244,7 @@
   <div class="tarjeta-pedido">
     <label class="tarjeta-pedido" for="pedido">
       <p>Información específica de pedido</p>
+      <button id="boton-Inicio-pedido">Inicio</button>
     </label>
   </div>
 </section>
@@ -247,6 +256,7 @@
   <div class="tarjeta-flujo-mercancias">
     <label class="tarjeta-apartado-cube" for="apartado-cube-flujo-mercancias">
       <p>Información específica de flujo-mercancias</p>
+      <button id="boton-Inicio-flujo-mercancias">Inicio</button>
     </label>
   </div>
 </section>
@@ -258,6 +268,7 @@
   <div class="tarjeta-cesta-impresion">
     <label class="tarjeta-apartado-cube" for="apartado-cube-cesta-impresion">
       <p>Información específica de cesta-impresion</p>
+      <button id="boton-Inicio-cesta-impresion">Inicio</button>
     </label>
   </div>
 </section>
@@ -269,8 +280,23 @@
   <div class="tarjeta-gestion-backoffice">
     <label class="tarjeta-apartado-cube" for="apartado-cube-gestion-backoffice">
       <p>Información específica de gestion-backoffice</p>
+      <button id="boton-Inicio-gestion-backoffice">Inicio</button>
     </label>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ... (tu código existente) ...
+  
+      // Agregar evento de clic al botón de retroceso específico de CUBE
+      document.getElementById('boton-Inicio-cube').addEventListener('click', function () {
+        if (seleccionAnterior) {
+          showSection(seleccionAnterior);
+        }
+      });
+  
+      // ... (otros eventos de clic para otras secciones) ...
+    });
+  </script>
 </section>
 
 </section>
