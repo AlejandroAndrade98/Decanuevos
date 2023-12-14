@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const tarjetaGestionBackoffice = document.getElementById('apartado-cube-gestion-backoffice');
   const seccionesContenido = document.querySelectorAll('section[id^="contenido-"]');
   const botonesInfo = document.querySelectorAll('.tarjeta-Dashboard button');
+ 
+
 
    let seleccionActual = null;
 
@@ -152,25 +154,44 @@ document.addEventListener('DOMContentLoaded', function () {
     seleccionAprendizaje.style.display = 'none';
 
      // Agregar evento de clic a los botones de "+ Info" en la sección de Dashboard
-   botonesInfo.forEach(boton => {
-    boton.addEventListener('click', function () {
-      // Encuentra el párrafo asociado al botón
-      const parrafo = boton.previousElementSibling;
+     botonesInfo.forEach(boton => {
+      boton.addEventListener('click', function () {
+        // Encuentra el párrafo asociado al botón
+        const parrafo = boton.previousElementSibling;
+  
+// Obtén todos los botones de información
+const botonesInfo = document.querySelectorAll('.boton-info');
 
-      // Alterna la visibilidad del párrafo
-      parrafo.style.display = parrafo.style.display === 'block' ? 'none' : 'block';
-    });
+// Agregar evento de clic a los botones de "+ Info"
+botonesInfo.forEach(boton => {
+  boton.addEventListener('click', function () {
+    // Encuentra el contenedor padre
+    const contenedor = boton.closest('.carta');
+
+    // Encuentra el párrafo y la imagen dentro del contenedor
+    const parrafo = contenedor.querySelector('p');
+    const imagen = contenedor.querySelector('.contenido-imagen');
+
+    // Alternar la visibilidad del párrafo e imagen
+    parrafo.style.display = (parrafo.style.display === 'none') ? 'block' : 'none';
+    imagen.style.display = (imagen.style.display === 'none') ? 'block' : 'none';
   });
-
-    // Verificar qué opción ha sido seleccionada y mostrar el contenido correspondiente
-    if (opcion1.checked) {
-      showSection('cube');
-    } else if (opcion2.checked) {
-      showSection('cestas');
-    } else if (opcion3.checked) {
-      showSection('basicos');
-    }
-  });
-
-
 });
+        
+      });
+      
+      
+
+    })
+      // Verificar qué opción ha sido seleccionada y mostrar el contenido correspondiente
+      if (opcion1.checked) {
+        showSection('cube');
+      } else if (opcion2.checked) {
+        showSection('cestas');
+      } else if (opcion3.checked) {
+        showSection('basicos');
+      }
+    });
+  
+  
+  });

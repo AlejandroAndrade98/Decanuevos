@@ -285,3 +285,8 @@ footer {
   display: none;
 }
 
+.contenido-imagen {
+  display: none;
+  height: 440px;
+  width: 200px;
+}
