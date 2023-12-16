@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const tarjetaCestaImpresion = document.getElementById('apartado-cube-cesta-impresion');
   const tarjetaGestionBackoffice = document.getElementById('apartado-cube-gestion-backoffice');
   const seccionesContenido = document.querySelectorAll('section[id^="contenido-"]');
-  const botonesInfo = document.querySelectorAll('.tarjeta-Dashboard button');
+
 
 // Función para manejar el clic en los botones de retroceso
 function handleInicioClick() {
@@ -131,16 +131,6 @@ document.querySelectorAll('[id^="boton-Inicio"]').forEach(botonInicio => {
       showSection('basicos');
     }
   });
-
-  // Agregar evento de clic a los botones de "+ Info" en la sección de Dashboard
-  botonesInfo.forEach(boton => {
-    boton.addEventListener('click', function () {
-      // Encuentra el párrafo asociado al botón
-      const parrafo = boton.previousElementSibling;
-      // Haz lo que necesitas con el párrafo
-    });
-  });
-
   // Obtén todos los botones de información
   const botonesInfoSeccion = document.querySelectorAll('.boton-info');
 
@@ -151,12 +141,14 @@ document.querySelectorAll('[id^="boton-Inicio"]').forEach(botonInicio => {
       const contenedor = boton.closest('.carta');
 
       // Encuentra el párrafo y la imagen dentro del contenedor
-      const parrafo = contenedor.querySelector('p');
+      const parrafos = contenedor.querySelectorAll('p');
       const imagen = contenedor.querySelector('.contenido-imagen');
 
       // Alternar la visibilidad del párrafo e imagen
-      if (parrafo && imagen) {
-        parrafo.style.display = (parrafo.style.display === 'block') ? 'none' : 'block';
+      if (parrafos && imagen) {
+        parrafos.forEach(parrafo => {
+          parrafo.style.display = (parrafo.style.display === 'block') ? 'none' : 'block';
+        });
         imagen.style.display = (imagen.style.display === 'block') ? 'none' : 'block';
       }
     });

@@ -290,3 +290,12 @@ footer {
   height: 440px;
   width: 200px;
 }
+
+#contenido-dashboard p2 {
+  display: none;
+}
+
+.carta ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
