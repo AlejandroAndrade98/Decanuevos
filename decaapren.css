@@ -299,3 +299,11 @@ footer {
   margin-bottom: 10px;
   line-height: 1.5;
 }
+.descripcion-producto {
+  /* Estilos para el contenedor principal */
+}
+
+.descripcion-producto .destacado {
+  font-weight: bold; /* Aplica negrita a los elementos destacados */
+}
+
