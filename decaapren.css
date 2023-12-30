@@ -291,12 +291,14 @@ footer {
   width: 200px;
 }
 
-#contenido-dashboard p2 {
+#contenido-dashboard {
   display: none;
 }
 
-.carta ul li {
+.carta {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   line-height: 1.5;
   align-items: flex-start;
   margin-left: 70px;
