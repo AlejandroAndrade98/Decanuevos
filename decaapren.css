@@ -298,8 +298,6 @@ footer {
 .carta ul li {
   margin-bottom: 10px;
   line-height: 1.5;
-<<<<<<< HEAD
-=======
   align-items: flex-start;
   margin-left: 70px;
   margin-right: 20px;
@@ -320,6 +318,5 @@ footer {
 
 .descripcion-producto .destacado {
   font-weight: bold; /* Aplica negrita a los elementos destacados */
->>>>>>> 6ccf9c2 (agregando contenido a controles de stock)
 }
 
