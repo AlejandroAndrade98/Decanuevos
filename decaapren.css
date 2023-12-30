@@ -194,10 +194,6 @@ input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
   color: white;
 }
 
-#contenido-dashboard h1{
-  color: white;
-}
-
 .tarjeta-Dashboard {
   max-width: 80%; /* Ajusta según sea necesario */
   margin: 20px auto; /* Centra horizontalmente con espacio superior e inferior */
@@ -299,8 +295,32 @@ footer {
   display: none;
 }
 
+
+.carta {
 .carta ul li {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   line-height: 1.5;
+  align-items: flex-start;
+  margin-left: 70px;
+  margin-right: 20px;
 }
 
+.carta button {
+  align-self: center;
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+.carta img {
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+  align-self: center; /* Centra la imagen en el eje horizontal dentro de .carta */
+  margin: 30px;
+}
+
+.descripcion-producto .destacado {
+  font-weight: bold; /* Aplica negrita a los elementos destacados */
+}
+  }
