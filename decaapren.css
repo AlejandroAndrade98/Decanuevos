@@ -295,6 +295,11 @@ footer {
   display: none;
 }
 
+#contenido-dashboard h1, h2{
+  color: #79cd7d;
+  font-size: xx-large;
+}
+
 .carta {
   margin-bottom: 10px;
   display: flex;
