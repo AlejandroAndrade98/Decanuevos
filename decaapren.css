@@ -179,6 +179,7 @@ body {
 #contenido-cube p {
   font-size: 20px;
   color: aliceblue;
+  text-align: center;
 }
 
 input[type="radio"][name="tarjeta-seleccion-aprendizaje"] {
@@ -298,6 +299,8 @@ footer {
 #contenido-dashboard h1, h2{
   color: #79cd7d;
   font-size: xx-large;
+  background-image: url('assets/CUBE/background.jpg.png');
+  background-size: cover;
 }
 
 .carta {
